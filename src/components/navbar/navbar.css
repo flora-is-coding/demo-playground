@@ -1,0 +1,7 @@
+.navbar__container {
+    padding: .7rem 0;
+}
+
+.navbar__container > a {
+    margin-left: .5rem;
+}

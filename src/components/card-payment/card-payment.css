@@ -1,0 +1,57 @@
+.card-box {
+    padding: 1rem;
+    background: rgb(217,194,228);
+    background: linear-gradient(90deg, rgba(217,194,228,1) 0%, rgba(145,79,185,1) 100%);
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 31.25rem;
+    box-shadow: 2px 2px 20px #707070;
+    margin-top: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: start;
+}
+
+.form > div {
+    margin-top: 1rem;
+}
+
+.payment {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.vt {
+    margin-right: 1rem;
+}
+
+.form--creditcard input {
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    background-color: transparent;
+}
+
+.button__add-card {
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 5rem;
+    height: 1.5rem;
+    background-color: rgb(162, 103, 218);
+    color: white;
+    transform: scale(1);
+    
+}
+
+.button__add-card:active {
+    transition: transform 200ms cubic-bezier(.44,0,.64,.89);
+    background-color: rgb(134, 48, 214);
+    transform: scale(0.8);
+    box-shadow: 0 1px rgb(156, 156, 156);
+}
+.list__element{
+    list-style: none;
+}

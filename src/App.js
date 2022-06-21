@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+import Counter from './components/counter/counter';
+import RandomAPI from './components/random-api/random-api';
+import Palidrome from './components/palindrome/palindrome';
+import CardPayment from './components/card-payment/card-payment';
+import CardList from './components/card-payment/card-list';
+import Home from './components/home/home';
+import NavBar from './components/navbar/navbar';
 
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='body'>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='counter' element={<Counter />} />
+          <Route path='randomAPI' element={<RandomAPI />} />
+          <Route path='palindrome' element={<Palidrome />} />
+          <Route path='card' element={<CardPayment />} />
+        </Routes>
+      </div>
     </div>
   );
 }
