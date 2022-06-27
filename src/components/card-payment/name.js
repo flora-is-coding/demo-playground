@@ -1,14 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 
 export default function Name (props) {
-
-    const [name, setName] = useState('')
 
     function validateName (value) {
         const result = value.match(/^[a-zA-ZĄ-Źą-ź\s]*$/g)
 
         const finalResult = result.join();
-        console.log(finalResult);
 
         return finalResult
     }
@@ -21,16 +18,15 @@ export default function Name (props) {
         } else {
             nextValue = validateName(nextValue)
         }
-        setName(nextValue);
         if (props.onChange) { props.onChange(nextValue) }
-        console.log(nextValue)
     }
 
     return (
         <div className="form__name name">
             <div className="name__title">NAME</div>
             <input 
-            value={name}
+            required
+            value={props.value}
             className="input name__text" 
             onChange={handleName} 
             placeholder='John Snow' 

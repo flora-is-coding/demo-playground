@@ -1,0 +1,9 @@
+.result--true {
+    color: green;
+    font-size: 2rem
+}
+
+.result--false {
+    color: red;
+    font-size: 2rem
+}

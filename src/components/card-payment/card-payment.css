@@ -54,4 +54,20 @@
 }
 .list__element{
     list-style: none;
+    border: 1px solid rgb(156, 50, 142);
+    border-radius: 20px;
+    background-color: rgb(255, 204, 213);
+    margin: 1rem 0;
+    width: 22rem;
+    box-shadow: 2px 2px 10px #707070;
+}
+
+/* .date__wrapper {
+    
+} */
+
+.payment__information {
+    font-size: .7rem;
+    color: rgb(79, 21, 94);
+    font-weight: 600;
 }

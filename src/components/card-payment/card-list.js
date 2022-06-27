@@ -3,23 +3,23 @@ import RemoveButton from './remove-button';
 
 export default function CardList(props) {
 
-    const handleRemove = () => {
-        console.log('removed: ', props.form)
-    }
+    const currForm = props.addedForm;
 
     return (
         <div className="card-list list">
             <div className="list__container">
                 <ul className="list">
-                    <li className='list__element'>
-                        <div className="name__element">Name: {props.form.name}</div>
-                        <div className="card-number__element">Card number: {props.form.cardNumber}</div>
-                        <div className="date__element">Valid thru: {props.form.expiryDate}</div>
-                        <div className="cvvcode__element">CVV: {props.form.cvv}</div>
-                    </li>
+                    { currForm && currForm.map((item, index) => (
+                        <li className='list__element'key={index} >
+                            <div className="name__element">Name: {item.name}</div>
+                            <div className="card-number__element">Card number: {item.cardNumber}</div>
+                            <div className="date__element">Valid thru: {item.expiryDate}</div>
+                            <div className="cvvcode__element">CVV: {item.cvv}</div>
+                            <RemoveButton onClick={() => props.handleRemove(index)}/>
+                        </li>
+                    ))}
                 </ul>
             </div>
-            <RemoveButton onClick={handleRemove}/>
         </div>
     )
 }

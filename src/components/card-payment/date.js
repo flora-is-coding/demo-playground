@@ -1,8 +1,6 @@
-import React, {useState} from "react";
+import React from "react";
 
 export default function Date (props) {
-
-    const [validate, setValidate] = useState('')
 
     function handleValidate (e) {
         let currValue = e.target.value;
@@ -12,8 +10,6 @@ export default function Date (props) {
         } else {
             currValue = validationFormat(currValue)
         } 
-        console.log(currValue)
-        setValidate(currValue)
         if (props.onChange) { props.onChange(currValue) }
     }
 
@@ -26,13 +22,16 @@ export default function Date (props) {
 
     return (
         <div className="payment__valid-thru vt">
-            <div className="vt__title">MM/YY</div>
+            <div className="vt__title">EXPIRY DATE</div>
             <input 
-            value={validate}
+            required
+            value={props.value}
             className="input vt__number" 
             maxLength='5' 
             onChange={handleValidate} 
             id="valid-thru" 
+            onMouseEnter={props.onMouseEnter}
+            onMouseLeave={props.onMouseLeave}
             />
         </div>
     )

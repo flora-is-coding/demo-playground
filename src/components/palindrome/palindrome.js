@@ -1,4 +1,5 @@
 import { useState } from "react";
+ import './palindrome.css';
 
 export default function Palindrome () {
 
@@ -81,8 +82,8 @@ export default function Palindrome () {
                     currentResult === null
                     ? <div className="result__null"></div>
                     : (currentResult
-                    ? <div  className="result__true">✔</div>
-                    : <div className="result__false">✘</div>)
+                    ? <div  className="result result--true">✔</div>
+                    : <div className="result result--false">✘</div>)
                     }
                 </div>
             </div>
